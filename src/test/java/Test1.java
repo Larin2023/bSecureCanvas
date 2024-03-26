@@ -11,7 +11,7 @@ public void workFlow() throws InterruptedException {
     loginPage.open();
     MainPage mainPage = loginPage.loginToApp(username, password);
 
-
+//
     Thread.sleep(5000);
     // Navigate to Fire Fighters Course page
     FireFightersCoursePage fireFightersCoursePage = mainPage.selectFireFightersCourse();

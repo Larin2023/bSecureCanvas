@@ -11,11 +11,17 @@ public class LoginPage extends BasePage{
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+//    private WebElement getEmailField(){
+//        By emailBy = By.xpath("//input[@name='pseudonym_session[unique_id]']");
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
+//        return driver.findElement(emailBy);
+//    }
+
     private WebElement getEmailField(){
-        By emailBy = By.xpath("//input[@name='pseudonym_session[unique_id]']");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(emailBy));
-        return driver.findElement(emailBy);
+        return driver.findElement(By.xpath("//input[@id='pseudonym_session_unique_id']"));
     }
+
+
     private WebElement getPasswordField(){
         return driver.findElement(By.xpath("//input[@type='password']"));
     }

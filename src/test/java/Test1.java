@@ -7,24 +7,21 @@ public class Test1 extends BaseTest {
 
 @Test
 public void workFlow() throws InterruptedException {
-    LoginPage loginPage = new LoginPage(driver);
+// Login to the application
     loginPage.open();
-    loginPage.loginToApp(username, password);
+    MainPage mainPage = loginPage.loginToApp(username, password);
 
-    MainPage mainPage = new MainPage(driver);
-    mainPage.selectFireFightersCourse();
 
-    FireFightersCoursePage fireFightersCoursePage = new FireFightersCoursePage(driver);
-    Thread.sleep(3000);
-    fireFightersCoursePage.selectProctoringFor3Link();
+    Thread.sleep(5000);
+    // Navigate to Fire Fighters Course page
+    FireFightersCoursePage fireFightersCoursePage = mainPage.selectFireFightersCourse();
 
-    Thread.sleep(15000);
+    Thread.sleep(5000);
+    // Navigate to Proctoring for - 3 page
+    bSecureCanvasProctoringFor3Page bSecureCanvasProctoringFor3PageObject = fireFightersCoursePage.selectProctoringFor3Link();
+
+    // Perform actions on Proctoring for - 3 page
     driver.switchTo().frame(driver.findElement(By.id("tool_content")));
-
-    bSecureCanvasProctoringFor3Page bSecureCanvasProctoringFor3PageObject = new bSecureCanvasProctoringFor3Page(driver);
     bSecureCanvasProctoringFor3PageObject.selectRescheduleButton();
-
-//    SelectDateAndTimePage selectDateAndTimePage = new SelectDateAndTimePage(driver);
-//    selectDateAndTimePage.selectTimeButton().selectNowButton().saveButton();
     }
 }

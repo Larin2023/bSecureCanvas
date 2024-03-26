@@ -6,10 +6,10 @@ import java.time.Duration;
 
 public class BasePage {
     protected WebDriver driver;
-    protected Wait<WebDriver> wait;
+//    protected Wait<WebDriver> wait;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(11));
+//        this.wait = new WebDriverWait(driver, Duration.ofSeconds(11));
     }
 }

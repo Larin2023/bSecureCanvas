@@ -22,6 +22,8 @@ public void workFlow() throws InterruptedException {
 
     // Perform actions on Proctoring for - 3 page
     driver.switchTo().frame(driver.findElement(By.id("tool_content")));
-    bSecureCanvasProctoringFor3PageObject.selectRescheduleButton();
+
+    SelectDateAndTimePage selectDateAndTimePage = bSecureCanvasProctoringFor3PageObject.selectRescheduleButton();
+
     }
 }

@@ -7,28 +7,13 @@ public class FireFightersCoursePage extends BasePage {
         super(driver);
     }
 
-//    private WebElement getBSecureCanvasbutton() {
-//        return driver.findElement(By.xpath("//a[@class='context_external_tool_26']"));
-//    }
-
-//    private WebElement getAssignmentsButton() {
-//        return driver.findElement(By.xpath("//a[@class='assignments active']"));
-//    }
-
-//    private WebElement getAssignmentsButton() {
-//        By assignmentsButtonBy = By.xpath("//a[@class='assignments active']");
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(assignmentsButtonBy));
-//        return driver.findElement(assignmentsButtonBy);
-//    }
-//
-
     private WebElement getProctoringFor3Button() {
         return driver.findElement(By.xpath("//a[normalize-space()='Proctoring for - 3']"));
     }
 
-    public bSecureCanvasProctoringFor3Page selectProctoringFor3Link() {
+    public BSecureCanvasProctoringFor3Page selectProctoringFor3Link() {
         getProctoringFor3Button().click();
-        return new bSecureCanvasProctoringFor3Page(driver);
+        return new BSecureCanvasProctoringFor3Page(driver);
     }
 
 //    public AssignmentsPage selectAssignmentsButton() {

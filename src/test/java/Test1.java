@@ -1,5 +1,3 @@
-
-
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -19,12 +17,17 @@ public class Test1 extends BaseTest {
 
         Thread.sleep(3000);
         // Navigate to Proctoring for - 3 page
-        bSecureCanvasProctoringFor3Page bSecureCanvasProctoringFor3PageObject = fireFightersCoursePage.selectProctoringFor3Link();
+        BSecureCanvasProctoringFor3Page bSecureCanvasProctoringFor3PagePage = fireFightersCoursePage.selectProctoringFor3Link();
 
         // Perform actions on Proctoring for - 3 page
         driver.switchTo().frame(driver.findElement(By.id("tool_content")));
 
-        SelectDateAndTimePage selectDateAndTimePage = bSecureCanvasProctoringFor3PageObject.selectRescheduleButton();
+        Thread.sleep(3000);
+        SelectDateAndTimePage selectDateAndTimePage = bSecureCanvasProctoringFor3PagePage.selectRescheduleButton();
+
+        selectDateAndTimePage.selectTime();
+        bSecureCanvasProctoringFor3PagePage.selectAuthenticationForProctoringButton();
+
 
     }
 }

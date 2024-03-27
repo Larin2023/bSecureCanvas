@@ -18,7 +18,7 @@ public class LoginPage extends BasePage{
 //    }
 
     private WebElement getEmailField(){
-        return driver.findElement(By.xpath("//input[@id='pseudonym_session_unique_id']"));
+        return driver.findElement(By.xpath("(//input[@id='pseudonym_session_unique_id'])[1]"));
     }
 
 

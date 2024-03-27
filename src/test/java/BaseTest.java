@@ -18,17 +18,17 @@ public class BaseTest {
 
     //for work computer
 
-//    @BeforeSuite
-//    public void beforeSuite() {
-//        System.setProperty("webdriver.chrome.driver", "C:/Users/alexander.anderson/IdeaProjects/InstaProject/chromedriver.exe");
-//    }
+    @BeforeSuite
+    public void beforeSuite() {
+        System.setProperty("webdriver.chrome.driver", "C:/Users/alexander.anderson/IdeaProjects/bSecureCanvas/chromedriver.exe");
+    }
 
     // for home computer
 
-    @BeforeSuite
-    public void beforeSuite() {
-        System.setProperty("webdriver.chrome.driver", "/Users/oleksii_kolesnik/IdeaProjects/bSecureCanvas/chromedriver");
-    }
+//    @BeforeSuite
+//    public void beforeSuite() {
+//        System.setProperty("webdriver.chrome.driver", "/Users/oleksii_kolesnik/IdeaProjects/bSecureCanvas/chromedriver");
+//    }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -37,10 +37,10 @@ public class BaseTest {
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-                                                 SafariDriver
-
-        // Initialize SafariDriver
-        driver = new SafariDriver();
+//        SafariDriver
+//
+//                // Initialize SafariDriver
+//                driver = new SafariDriver();
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -50,10 +50,10 @@ public class BaseTest {
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-////                                             //// ChromeDriver
-////
-//        // Pass the options when initializing ChromeDriver
-//        driver = new ChromeDriver();
+//                                             //// ChromeDriver
+//
+        // Pass the options when initializing ChromeDriver
+        driver = new ChromeDriver();
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -64,14 +64,14 @@ public class BaseTest {
 
         // Initialize the login page and navigate to it
         loginPage = new LoginPage(driver);
-        loginPage.open();
+
 
         // I keep this data for later
         username = "Satyen";
         password = "Password1";
 
-        // Perform login and get to the main page
-        mainPage = loginPage.loginToApp(username, password);
+//        // Perform login and get to the main page
+//        mainPage = loginPage.loginToApp(username, password);
 
     }
 //    @AfterMethod

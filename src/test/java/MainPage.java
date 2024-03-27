@@ -14,7 +14,7 @@ public class MainPage extends BasePage {
 //    }
 
     private WebElement getFireFightersCourseButton(){
-        return driver.findElement(By.xpath("//div[@aria-label=\"Fire Fighter's Course\"]//a[@class='ic-DashboardCard__link']//span[1]"));
+        return driver.findElement(By.xpath("(//span[normalize-space()=\"Fire Fighter's Course\"])[1]"));
     }
     public FireFightersCoursePage selectFireFightersCourse() {
         getFireFightersCourseButton().click();

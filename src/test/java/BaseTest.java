@@ -1,5 +1,7 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
@@ -15,17 +17,17 @@ public class BaseTest {
 
     //for work computer
 
-    @BeforeSuite
-    public void beforeSuite() {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/alexander.anderson/IdeaProjects/bSecureCanvas/chromedriver.exe");
-    }
+//    @BeforeSuite
+//    public void beforeSuite() {
+//        System.setProperty("webdriver.chrome.driver", "C:/Users/alexander.anderson/IdeaProjects/bSecureCanvas/chromedriver.exe");
+//    }
 
     // for home computer
 
-//    @BeforeSuite
-//    public void beforeSuite() {
-//        System.setProperty("webdriver.chrome.driver", "/Users/oleksii_kolesnik/IdeaProjects/bSecureCanvas/chromedriver");
-//    }
+    @BeforeSuite
+    public void beforeSuite() {
+        System.setProperty("webdriver.chrome.driver", "/Users/oleksii_kolesnik/IdeaProjects/bSecureCanvas/chromedriver");
+    }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -35,9 +37,9 @@ public class BaseTest {
 /////////////////////////////////////////////////////////////////////////////////////////
 
 //        SafariDriver
-//
-//                // Initialize SafariDriver
-//                driver = new SafariDriver();
+
+                // Initialize SafariDriver
+                driver = new SafariDriver();
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -49,8 +51,8 @@ public class BaseTest {
 
 //                                             //// ChromeDriver
 //
-        // Pass the options when initializing ChromeDriver
-        driver = new ChromeDriver();
+//        // Pass the options when initializing ChromeDriver
+//        driver = new ChromeDriver();
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 

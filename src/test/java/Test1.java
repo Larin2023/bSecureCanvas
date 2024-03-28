@@ -19,6 +19,7 @@ public class Test1 extends BaseTest {
         // Navigate to Proctoring for - 3 page
         BSecureCanvasProctoringFor3Page bSecureCanvasProctoringFor3PagePage = fireFightersCoursePage.selectProctoringFor3Link();
 
+        Thread.sleep(8000);
         // Perform actions on Proctoring for - 3 page
         driver.switchTo().frame(driver.findElement(By.id("tool_content")));
 
@@ -26,8 +27,21 @@ public class Test1 extends BaseTest {
         SelectDateAndTimePage selectDateAndTimePage = bSecureCanvasProctoringFor3PagePage.selectRescheduleButton();
 
         selectDateAndTimePage.selectTime();
-        bSecureCanvasProctoringFor3PagePage.selectAuthenticationForProctoringButton();
 
+        Thread.sleep(3000);
+        ProctoringFor3AuthenticationSystemCheckPage proctoringFor3AuthenticationSystemCheckPage = bSecureCanvasProctoringFor3PagePage.selectAuthenticationForProctoringButton();
+
+        Thread.sleep(3000);
+        proctoringFor3AuthenticationSystemCheckPage.selectTestSystemButton();
+
+//        for (String windowHandle : driver.getWindowHandles()) {
+//            driver.switchTo().window(windowHandle);
+//        }
+//
+//        String popupPageSource = driver.getPageSource();
+//        System.out.println(popupPageSource);
 
     }
 }
+
+//ChooseWhatToShareWithPage chooseWhatToShareWithPage =

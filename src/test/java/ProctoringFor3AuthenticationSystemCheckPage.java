@@ -11,8 +11,16 @@ public class ProctoringFor3AuthenticationSystemCheckPage extends BasePage {
     private WebElement getTestSystem() {
         return driver.findElement(By.xpath("//p[normalize-space()='Test System']"));
     }
-    public ChooseWhatToShareWithPage selectTestSystemButton() {
+
+
+        public CanvasExamdOrgWantsToPage selectTestSystemButton() {
         getTestSystem().click();
-        return new ChooseWhatToShareWithPage(driver);
+        return new CanvasExamdOrgWantsToPage(driver);
     }
+
+
+//    public ChooseWhatToShareWithPage selectTestSystemButton() {
+//        getTestSystem().click();
+//        return new ChooseWhatToShareWithPage(driver);
+//    }
 }

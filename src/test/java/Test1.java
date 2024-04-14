@@ -5,8 +5,8 @@ public class Test1 extends BaseTest {
 
     @Test
     public void workFlow() throws InterruptedException {
-// Login to the application
 
+        // Login to the application
         loginPage.open();
         MainPage mainPage = loginPage.loginToApp(username, password);
 

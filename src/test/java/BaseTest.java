@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -38,8 +39,8 @@ public class BaseTest {
 
 //        SafariDriver
 
-                // Initialize SafariDriver
-                driver = new SafariDriver();
+//                // Initialize SafariDriver
+//                driver = new SafariDriver();
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -53,6 +54,16 @@ public class BaseTest {
 //
 //        // Pass the options when initializing ChromeDriver
 //        driver = new ChromeDriver();
+
+
+// Configure Chrome options to use fake device for media stream and fake video capture
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--use-fake-device-for-media-stream");
+        options.addArguments("--use-file-for-fake-video-capture=/Users/oleksii_kolesnik/Movies/test ExamD.mp4");
+
+        // Pass Chrome options when creating WebDriver instance
+        driver = new ChromeDriver(options);
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 

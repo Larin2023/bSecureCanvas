@@ -1,5 +1,8 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
+
+import java.util.Set;
 
 public class Test1 extends BaseTest {
 
@@ -34,6 +37,14 @@ public class Test1 extends BaseTest {
         Thread.sleep(3000);
         proctoringFor3AuthenticationSystemCheckPage.selectTestSystemButton();
 
+//        String mainWindowHandle = driver.getWindowHandle();
+//        Set<String> windowHandles = driver.getWindowHandles();
+//        for (String handle : windowHandles) {
+//            if (!handle.equals(mainWindowHandle)) {
+//                driver.switchTo().window(handle);
+//                break;
+//            }
+        }
 //        for (String windowHandle : driver.getWindowHandles()) {
 //            driver.switchTo().window(windowHandle);
 //        }
@@ -42,6 +53,6 @@ public class Test1 extends BaseTest {
 //        System.out.println(popupPageSource);
 
     }
-}
+
 
 //ChooseWhatToShareWithPage chooseWhatToShareWithPage =

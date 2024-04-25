@@ -6,6 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
+
 public class BaseTest {
     protected WebDriver driver;
     protected String username;
@@ -55,14 +57,26 @@ public class BaseTest {
 //        // Pass the options when initializing ChromeDriver
 //        driver = new ChromeDriver();
 
-
-// Configure Chrome options to use fake device for media stream and fake video capture
         ChromeOptions options = new ChromeOptions();
+
+      //Configure Chrome options to use fake device for media stream and fake video capture
         options.addArguments("--use-fake-device-for-media-stream");
         options.addArguments("--use-file-for-fake-video-capture=/Users/oleksii_kolesnik/Movies/test ExamD.mp4");
 
+        // Add additional arguments to automatically grant screen sharing permission
+        options.addArguments("--auto-select-desktop-capture-source=Entire screen");
+        options.addArguments("--use-fake-ui-for-media-stream");
+
+//        // Path to your .crx file
+//        String extensionPath = "/Users/oleksii_kolesnik/auto-desktop-sharing-extension.crx";
+//
+//        // Add the extension to ChromeOptions
+//        options.addExtensions(new File(extensionPath));
+
         // Pass Chrome options when creating WebDriver instance
         driver = new ChromeDriver(options);
+
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
